@@ -69,20 +69,19 @@ form.addEventListener('submit', e => {
     checkEmail(email);
     checkPasswordMatch(password, password2);
 });
-
-
-//check input
-const checkInput = (input) => {
-    if (input.id === 'username' || input.id === 'email' || input.id === 'password' || input.id === 'password2') {
-        checkRequired([input]);
-    }
-    if (input.id === 'username') {
-        checkLength(input, 3, 15);
-    } else if (input.id === 'email') {
-        checkEmail(input);
-    } else if (input.id === 'password') {
-        checkLength(password, 6, 25);
-    } else if (input.id === 'password2') {
-        checkPasswordMatch(password, password2);
-    }
-}
+username.addEventListener('keyup', () => {
+    checkRequired([username]);
+    checkLength(username, 3, 15);
+});
+email.addEventListener('keyup', () => {
+    checkRequired([email]);
+    checkEmail(email);
+});
+password.addEventListener('keyup', () => {
+    checkRequired([password]);
+    checkLength(password, 6, 25);
+});
+password2.addEventListener('keyup', () => {
+    checkRequired([password2]);
+    checkPasswordMatch(password, password2);
+});
