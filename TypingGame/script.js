@@ -120,4 +120,8 @@ settingsBtn.addEventListener('click', () => {
 settingsForm.addEventListener('change', e => {
     difficulty = e.target.value;
     localStorage.setItem('difficulty', difficulty);
+    score = 0;
+    time = 10;
+    scoreEl.innerHTML = score;
+    timeEl.innerHTML = `${time}s`;
 });
