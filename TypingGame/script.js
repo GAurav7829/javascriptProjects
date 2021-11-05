@@ -61,13 +61,17 @@ const updateTime = () => {
 const timeInterval = setInterval(updateTime, 1000);
 
 //generate random word from arrray
-const getRandomWord = () => {
-    return words[Math.floor(Math.random() * words.length)];
+async function getRandomWord() {
+    //return words[Math.floor(Math.random() * words.length)];
+    const res = await fetch(`https://random-word-api.herokuapp.com/word?number=1`);
+    const data = await res.json();
+    return data[0];
+
 }
 
 //add word to dom
-const addWordToDOM = () => {
-    randomWord = getRandomWord();
+async function addWordToDOM() {
+    randomWord = await getRandomWord();
     word.innerHTML = randomWord;
 }
 
