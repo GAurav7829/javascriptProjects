@@ -1,9 +1,18 @@
+:root{
+    --blue: #0095dd;
+    --white: #fff;
+    --light-grey: #f0f0f0;
+    --black: #000;
+    --dark-grey: #222;
+    --mid-grey: #333;
+}
+
 *{
     box-sizing: border-box;
 }
 
 body{
-    background-color: #0095dd;
+    background-color: var(--blue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,11 +24,11 @@ body{
 
 h1{
     font-size: 45px;
-    color: #fff;
+    color: var(--white);
 }
 
 canvas{
-    background-color: #f0f0f0;
+    background-color: var(--light-grey);
     display: block;
     border-radius: 5px;
 }
@@ -28,8 +37,8 @@ canvas{
     cursor: pointer;
     border: none;
     padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--black);
+    color: var(--white);
     border-radius: 5px;
 }
 
@@ -38,7 +47,7 @@ canvas{
 }
 
 .btn:hover{
-    background-color: #222;
+    background-color: var(--dark-grey);
 }
 
 .btn:active{
@@ -55,8 +64,8 @@ canvas{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--mid-grey);
+    color: var(--white);
     min-height: 100vh;
     width: 400px;
     padding: 20px;
